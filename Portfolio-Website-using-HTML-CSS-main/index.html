@@ -1,286 +1,556 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles.css">
-        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/devicons/1.8.0/css/devicons.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Boxicons -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366f1', // Indigo
+                        secondary: '#9333ea', // Purple
+                        dark: '#111827',
+                        light: '#f9fafb'
+                    },
+                }
+            }
+        }
+    </script>
+    <title>Rishika Gautam | Java Developer</title>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+    <!-- HEADER -->
+    <header class="fixed w-full bg-white shadow-sm z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-primary">RG</a>
+            
+            <!-- Mobile menu button -->
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <ul class="hidden md:flex space-x-8">
+                <li><a href="#home" class="hover:text-primary transition duration-300">Home</a></li>
+                <li><a href="#about" class="hover:text-primary transition duration-300">About</a></li>
+                <li><a href="#skills" class="hover:text-primary transition duration-300">Skills</a></li>
+                <li><a href="#projects" class="hover:text-primary transition duration-300">Projects</a></li>
+                <li><a href="#contact" class="hover:text-primary transition duration-300">Contact</a></li>
+            </ul>
+        </nav>
         
-        <title>Complete Responsive Portfolio Website</title>
-    </head>
-    <body>
-        <!-- HEADER -->
-        <header class="l-header">
-            <nav class="nav bd-grid">
-                <div>
-                    <a href="#" class="nav__logo"></a>
-                </div>
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white w-full">
+            <ul class="px-6 py-4 space-y-4">
+                <li><a href="#home" class="block hover:text-primary transition duration-300">Home</a></li>
+                <li><a href="#about" class="block hover:text-primary transition duration-300">About</a></li>
+                <li><a href="#skills" class="block hover:text-primary transition duration-300">Skills</a></li>
+                <li><a href="#projects" class="block hover:text-primary transition duration-300">Projects</a></li>
+                <li><a href="#contact" class="block hover:text-primary transition duration-300">Contact</a></li>
+            </ul>
+        </div>
+    </header>
 
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-                        <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
-                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                        <li class="nav__item"><a href="#myprojects" class="nav__link">My Projects</a></li>
-                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-                    </ul>
-                </div>
+    <main>
+<!-- HOME SECTION -->
+<section id="home" class="min-h-screen flex items-center pt-16 bg-gradient-to-br from-indigo-100 to-purple-100">
+  <div class="container mx-auto max-w-7xl px-6 py-12 md:py-24">
+      <div class="flex flex-col md:flex-row items-center justify-between">
+          <div class="md:w-1/2 text-center md:text-left mb-12 md:mb-0">
+              <div class="inline-block px-4 py-1 bg-indigo-100 text-primary rounded-full mb-4 animate-pulse">
+                  <span class="font-medium">Available for new opportunities</span>
+              </div>
+              
+              <h2 class="text-xl md:text-2xl font-medium text-gray-600 mb-2">Hi there <span class="wave">👋</span></h2>
+              
+              <h1 class="text-4xl md:text-6xl font-bold mb-4">
+                  I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-600">Rishika Gautam</span>
+              </h1>
+              
+              <h2 class="text-2xl md:text-3xl font-semibold text-gray-700 mb-6 flex items-center">
+                  <span>Java Developer</span>
+                  <span class="ml-3 h-1 w-10 bg-primary inline-block"></span>
+              </h2>
+              
+              <p class="text-gray-600 mb-8 max-w-lg text-lg">
+                  Passionate about building robust and scalable web applications with Java and Spring Boot. Creating elegant solutions to complex problems.
+              </p>
+              
+              <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start">
+                  <a href="#contact" class="px-8 py-4 bg-gradient-to-r from-primary to-indigo-700 text-white rounded-lg hover:shadow-lg transition duration-300 text-center transform hover:-translate-y-1">
+                      <span class="flex items-center justify-center">
+                          <span>Contact Me</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                          </svg>
+                      </span>
+                  </a>
+                  <a href="https://drive.google.com/file/d/1IsziNEwZxb1xxT53nkqF9XHawXQ3qBdK/view?usp=sharing" class="px-8 py-4 border-2 border-primary text-primary rounded-lg hover:bg-indigo-50 transition duration-300 text-center transform hover:-translate-y-1 flex items-center justify-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                          <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" />
+                      </svg>
+                      Download CV
+                  </a>
+              </div>
+              
+              <div class="mt-10 flex space-x-5">
+                  <a href="https://www.linkedin.com/in/rishika-gautam-353758256" class="text-gray-500 hover:text-primary transition-colors duration-300">
+                      <i class="bx bxl-linkedin text-2xl"></i>
+                  </a>
+                  <a href="https://github.com/RishikaGautam004" class="text-gray-500 hover:text-primary transition-colors duration-300">
+                      <i class="bx bxl-github text-2xl"></i>
+                  </a>
+                  <a href="mailto:rishikagautam967@gmail.com" class="text-gray-500 hover:text-primary transition-colors duration-300">
+                      <i class="fas fa-envelope text-2xl"></i>
+                  </a>
+              </div>
+          </div>
+          
+          <div class="md:w-2/5 relative">
+              <!-- Decorative elements -->
+              <div class="absolute -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-primary rounded-full opacity-10 filter blur-3xl"></div>
+              <div class="absolute -z-10 top-1/4 right-1/4 w-20 h-20 bg-purple-500 rounded-full opacity-20 animate-pulse"></div>
+              <div class="absolute -z-10 bottom-1/4 left-1/4 w-16 h-16 bg-indigo-500 rounded-full opacity-20 animate-bounce"></div>
+              
+              <!-- Profile image with custom styling -->
+              <div class="relative bg-white p-4 rounded-full shadow-2xl transform transition duration-500 hover:scale-105 border-4 border-white">
+                  <div class="absolute inset-0 rounded-full bg-gradient-to-br from-primary to-purple-600 opacity-10"></div>
+                  <img src="images/rishika photo.jpg" alt="Rishika Gautam" class="rounded-full relative z-10">
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
 
-            </nav>
-        </header>
+<style>
+  /* Waving hand animation */
+  .wave {
+      animation-name: wave-animation;
+      animation-duration: 2.5s;
+      animation-iteration-count: infinite;
+      transform-origin: 70% 70%;
+      display: inline-block;
+  }
+  
+  @keyframes wave-animation {
+      0% { transform: rotate(0.0deg); }
+      10% { transform: rotate(14.0deg); }
+      20% { transform: rotate(-8.0deg); }
+      30% { transform: rotate(14.0deg); }
+      40% { transform: rotate(-4.0deg); }
+      50% { transform: rotate(10.0deg); }
+      60% { transform: rotate(0.0deg); }
+      100% { transform: rotate(0.0deg); }
+  }
+</style>
 
-        <main class="l-main">
-            <!--===== HOME =====-->
-            <section class="home bd-grid" id="home">
-                <div class="home__data">
-                    <h1 class="home__title">Hi 👋,
-                      
-                      <br>I'am <span class="home__title-color">Rishika Gautam</span> <br> Java Developer</h1>
+        <!-- ABOUT SECTION -->
+<section id="about" class="py-20 bg-white dark:bg-gray-900">
+  <div class="container mx-auto max-w-7xl px-6">
+      
+      <!-- Section Heading -->
+      <h2 class="text-4xl font-bold text-center mb-16 relative">
+          About Me
+          <div class="w-24 h-1 bg-blue-600 mx-auto mt-4"></div>
+      </h2>
 
-                    <a href="#contact" class="button">Contact Me</a>
-                    <a href="#" class="button2">Download CV</a>
-                </div>
-                
-                
+      <div class="flex flex-col md:flex-row items-center justify-between">
+          
+          <!-- Image Section -->
+          <div class="md:w-2/5 mb-8 md:mb-0">
+              <div class="rounded-xl flex justify-center items-center overflow-hidden transform transition duration-500 hover:scale-105">
+                  <img src="images/rishi .jpg" alt="Rishika Gautam" class=" h-96 object-fit">
+              </div>
+          </div>
 
-                <div class="home__img">   
-                    <img src="images/ppp.png" alt="">
-                </div>
-            </section>
+          <!-- Text & Strengths Section -->
+          <div class="md:w-1/2 md:pl-12">
+              
+              <!-- About Text -->
+              <p class="text-gray-700 dark:text-gray-400 leading-relaxed mb-4">
+                  Hey there! 👋 I'm <span class="font-bold text-blue-600">Rishika Gautam</span>, a 
+                  <strong>Java Developer</strong> passionate about crafting efficient and scalable 
+                  web applications. With hands-on experience in <strong>Spring Boot, Hibernate, 
+                  and RESTful APIs</strong>, I strive to deliver <em>clean, maintainable, and performant code</em>.
+              </p>
+              <p class="text-gray-700 dark:text-gray-400 leading-relaxed mb-4">
+                  My focus is on creating <span class="text-blue-500 font-medium">robust backend systems</span> 
+                  and seamless web experiences. Whether it's optimizing database queries, designing 
+                  RESTful APIs, or implementing MVC architecture, I am committed to delivering excellence.
+              </p>
+              
+              
 
-            <!--===== ABOUT =====-->
-            <section class="about section " id="about">
-                <h2 class="section-title">About</h2>
+      <!-- Quote/Testimonials Section -->
+      <div class="mt-16 text-center">
+          <h3 class="text-2xl font-semibold text-gray-800 dark:text-white mb-6">What Drives Me 💡</h3>
+          <blockquote class="text-xl italic text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
+              "The only way to do great work is to love what you do." 
+              <br>— Steve Jobs
+          </blockquote>
+      </div>
 
-                <div class="about__container bd-grid">
-                    <div class="about__img" >
-                        <img src="images/pp.png" alt="">
-                    </div>
-                    
-                    <div>
-                        <p class="about__text">Hello there ! I am a passionate and detail-oriented Java Developer with expertise in building robust and scalable applications.
-                        <br>Skilled in Spring Boot, Hibernate, Servlets, and JSP, I specialize in creating efficient backend systems and dynamic web applications. I have hands-on experience in developing RESTful APIs, managing databases with JPA and Hibernate, and implementing MVC architecture using Servlets and JSP.
-                        <br>My problem-solving abilities and keen attention to detail enable me to write clean, maintainable, and efficient code. I am always eager to learn new technologies and enhance my development skills to deliver high-quality software solutions.
-                        </p>           
-                    </div>                                   
-                </div>
-            </section> 
-              <!-- Skills -->
-              <section class="skills section" id="skills">
-                <div class="skills__container">
-                  <h2 class="section-title">Skills</h2>
-                  
-                  <div class="skills__content">
+  </div>
+</section>
+
+
+        <!-- SKILLS SECTION -->
+        <section id="skills" class="py-20 bg-gray-50">
+            <div class="container max-w-7xl mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-16 relative">
+                    Skills
+                    <div class="w-24 h-1 bg-primary mx-auto mt-4"></div>
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <!-- Languages -->
-                    <div class="skills__card">
-                      <div class="card__header">
-                        <div class="card__icon">
-                          <i class="fas fa-code"></i>
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl">
+                        <div class="bg-primary p-4 text-white flex items-center space-x-3">
+                            <i class="fas fa-code text-2xl"></i>
+                            <h3 class="text-xl font-semibold">Languages</h3>
                         </div>
-                        <h3 class="card__title">Languages</h3>
-                      </div>
-                      <div class="card__body">
-                        <div class="skill-tag">
-                          <span class="skill-name">Java</span>
-                          <div class="skill-badge">Advanced</div>
+                        <div class="p-6 space-y-4">
+                            <div class="flex justify-between">
+                                <span class="font-medium">Java</span>
+                                <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">Advanced</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-primary h-2.5 rounded-full" style="width: 90%"></div>
+                            </div>
+                            
+                            <div class="flex justify-between">
+                                <span class="font-medium">HTML</span>
+                                <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">Advanced</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-primary h-2.5 rounded-full" style="width: 85%"></div>
+                            </div>
+                            
+                            <div class="flex justify-between">
+                                <span class="font-medium">CSS</span>
+                                <span class="px-2 py-1 bg-yellow-100 text-yellow-800 text-xs rounded-full">Intermediate</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-primary h-2.5 rounded-full" style="width: 70%"></div>
+                            </div>
+                            
+                            <div class="flex justify-between">
+                                <span class="font-medium">JavaScript</span>
+                                <span class="px-2 py-1 bg-yellow-100 text-yellow-800 text-xs rounded-full">Intermediate</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-primary h-2.5 rounded-full" style="width: 65%"></div>
+                            </div>
                         </div>
-                        <div class="skill-tag">
-                          <span class="skill-name">HTML</span>
-                          <div class="skill-badge">Advanced</div>
-                        </div>
-                        <div class="skill-tag">
-                          <span class="skill-name">CSS</span>
-                          <div class="skill-badge">Intermediate</div>
-                        </div>
-                        <div class="skill-tag">
-                          <span class="skill-name">JavaScript</span>
-                          <div class="skill-badge">Intermediate</div>
-                        </div>
-                      </div>
                     </div>
                     
                     <!-- Frameworks -->
-                    <div class="skills__card">
-                      <div class="card__header">
-                        <div class="card__icon">
-                          <i class="fas fa-layer-group"></i>
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl">
+                        <div class="bg-secondary p-4 text-white flex items-center space-x-3">
+                            <i class="fas fa-layer-group text-2xl"></i>
+                            <h3 class="text-xl font-semibold">Frameworks</h3>
                         </div>
-                        <h3 class="card__title">Frameworks</h3>
-                      </div>
-                      <div class="card__body">
-                        <div class="skill-tag">
-                          <span class="skill-name">Spring Boot</span>
-                          <div class="skill-badge">Advanced</div>
+                        <div class="p-6 space-y-4">
+                            <div class="flex justify-between">
+                                <span class="font-medium">Spring Boot</span>
+                                <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">Advanced</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-secondary h-2.5 rounded-full" style="width: 85%"></div>
+                            </div>
+                            
+                            <div class="flex justify-between">
+                                <span class="font-medium">Hibernate</span>
+                                <span class="px-2 py-1 bg-yellow-100 text-yellow-800 text-xs rounded-full">Intermediate</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-secondary h-2.5 rounded-full" style="width: 75%"></div>
+                            </div>
+                            
+                            <div class="flex justify-between">
+                                <span class="font-medium">JSP</span>
+                                <span class="px-2 py-1 bg-yellow-100 text-yellow-800 text-xs rounded-full">Intermediate</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-secondary h-2.5 rounded-full" style="width: 70%"></div>
+                            </div>
+                            
+                            <div class="flex justify-between">
+                                <span class="font-medium">Servlets</span>
+                                <span class="px-2 py-1 bg-yellow-100 text-yellow-800 text-xs rounded-full">Intermediate</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-secondary h-2.5 rounded-full" style="width: 70%"></div>
+                            </div>
                         </div>
-                        <div class="skill-tag">
-                          <span class="skill-name">Hibernate</span>
-                          <div class="skill-badge">Intermediate</div>
-                        </div>
-                        <div class="skill-tag">
-                          <span class="skill-name">JSP</span>
-                          <div class="skill-badge">Intermediate</div>
-                        </div>
-                        <div class="skill-tag">
-                          <span class="skill-name">Servlets</span>
-                          <div class="skill-badge">Intermediate</div>
-                        </div>
-                      </div>
                     </div>
                     
                     <!-- Database & Tools -->
-                    <div class="skills__card">
-                      <div class="card__header">
-                        <div class="card__icon">
-                          <i class="fas fa-database"></i>
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl">
+                        <div class="bg-indigo-700 p-4 text-white flex items-center space-x-3">
+                            <i class="fas fa-database text-2xl"></i>
+                            <h3 class="text-xl font-semibold">Database & Tools</h3>
                         </div>
-                        <h3 class="card__title">Database & Tools</h3>
-                      </div>
-                      <div class="card__body">
-                        <div class="skill-tag">
-                          <span class="skill-name">MySQL</span>
-                          <div class="skill-badge">Advanced</div>
+                        <div class="p-6 space-y-4">
+                            <div class="flex justify-between">
+                                <span class="font-medium">MySQL</span>
+                                <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">Advanced</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-indigo-700 h-2.5 rounded-full" style="width: 85%"></div>
+                            </div>
+                            
+                            <div class="flex justify-between">
+                                <span class="font-medium">Git</span>
+                                <span class="px-2 py-1 bg-yellow-100 text-yellow-800 text-xs rounded-full">Intermediate</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-indigo-700 h-2.5 rounded-full" style="width: 70%"></div>
+                            </div>
+                            
+                            <div class="flex justify-between">
+                                <span class="font-medium">Eclipse</span>
+                                <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">Advanced</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-indigo-700 h-2.5 rounded-full" style="width: 85%"></div>
+                            </div>
+                            
+                            <div class="flex justify-between">
+                                <span class="font-medium">VS Code</span>
+                                <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">Advanced</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-indigo-700 h-2.5 rounded-full" style="width: 85%"></div>
+                            </div>
                         </div>
-                        <div class="skill-tag">
-                          <span class="skill-name">Git</span>
-                          <div class="skill-badge">Intermediate</div>
-                        </div>
-                        <div class="skill-tag">
-                          <span class="skill-name">Eclipse</span>
-                          <div class="skill-badge">Advanced</div>
-                        </div>
-                        <div class="skill-tag">
-                          <span class="skill-name">VS Code</span>
-                          <div class="skill-badge">Advanced</div>
-                        </div>
-                      </div>
                     </div>
-                  </div>
                 </div>
-              </section>
-                        
-                    
-                    
-                        
-            
+            </div>
+        </section>
 
-            <!--My Projects-->
-                <h2 class="section-title">My Projects</h2>
+        <!-- PROJECTS SECTION -->
+<section id="projects" class="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+  <div class="container max-w-7xl mx-auto px-6">1
+      <!-- Title -->
+      <h2 class="text-4xl font-bold text-center text-white mb-16 relative">
+        My Projects
+          <div class="w-24 h-1 bg-cyan-400 mx-auto mt-4 rounded-full"></div>
+      </h2>
 
-                <div class="ag-format-container">
-              <div class="ag-courses_box">
-    <div class="ag-courses_item">
-      <a href="#" class="ag-courses-item_link">
-        <div class="ag-courses-item_bg"></div>
-
-        <div class="ag-courses-item_title">
-          Hospital Management System
-        </div>
-
-        <div class="ag-courses-item_date-box">
-          <span class="ag-courses-item_date">
-            <p> Developed a Java-based hospital management system with patient and doctor management , appointment scheduling and database connectivity using JDBC and MySQL.  </p>
-          </span>
-        </div>
-      </a>
-    </div>
-
-    <div class="ag-courses_item">
-      <a href="#" class="ag-courses-item_link">
-        <div class="ag-courses-item_bg"></div>
-
-        <div class="ag-courses-item_title">
-            Chatting Application
-        </div>
-
-        <div class="ag-courses-item_date-box">
-          <span class="ag-courses-item_date">
-            <p> Developed a real-time chat application using Java Swing and AWT for the user interface and implemented socket programming to facilitate an amazing client-server communication.</p>
-          </span>
-        </div>
-      </a>
-    </div>
-
-    <div class="ag-courses_item">
-      <a href="#" class="ag-courses-item_link">
-        <div class="ag-courses-item_bg"></div>
-
-       <div class="ag-courses-item_title">
-          Coffee Website
-        </div>
-
-        <div class="ag-courses-item_date-box">
-          <span class="ag-courses-item_date">
-            <p>The Coffee House website is a sleek, modern, and fully responsive web application designed using HTML, CSS (Tailwind), and JavaScript. It offers a seamless user experience with smooth navigation and visually appealing sections. </p>
-          </span>
-        </div>
-      </a>
-    </div>
-    </div>
-      </section>
-            
-            <!--=====CONTACT=====--->
-            <section class="contact section" id="contact">
-                <h2 class="section-title">Contact Me</h2>
-
-                <div class="home__social">
-                    <a href="https://www.linkedin.com/in/rishika-gautam-353758256?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="footer__icon"><i class='bx bxl-linkedin'></i></a>
-                    <a href="mailto:rishikagautam967@gmail.com" class="footer__icon" target="_blank"><i class="fa-solid fa-envelope"></i></a>            
-                    <a href="https://github.com/RishikaGautam004" class="footer__icon"><i class='bx bxl-github' ></i></a>
-                </div>
-
-                <div class="contact__container bd-grid">
-                  <form id="contactForm" class="contact__form">
-                      <input type="text" id="name" placeholder="Name" class="contact__input" required>
-                      <input type="email" id="email" placeholder="Email" class="contact__input" required>
-                      <textarea id="message" placeholder="Message" cols="0" rows="10" class="contact__input" required></textarea>
-                      <button type="submit" class="contact__button button">Send</button>
-                  </form>
-                  <p id="responseMessage" style="color: green; display: none;">Message sent successfully!</p>
+      <!-- Projects Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Project 1 -->
+          <div class="relative bg-white/10 backdrop-blur-md rounded-xl shadow-lg overflow-hidden p-6 transition-all duration-500 hover:scale-105 hover:shadow-2xl border border-white/20">
+              <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/30 to-purple-600/30 opacity-50"></div>
+              <h3 class="text-2xl font-bold text-white mb-4 relative">Hospital Management System</h3>
+              <p class="text-white/80 mb-6 relative">
+                  Java-based hospital management system with patient and doctor management, appointment scheduling, and database connectivity using JDBC and MySQL.
+              </p>
+              <div class="flex space-x-2 relative">
+                  <span class="px-3 py-1 bg-indigo-500 text-white text-xs rounded-full shadow-md">Java</span>
+                  <span class="px-3 py-1 bg-purple-500 text-white text-xs rounded-full shadow-md">JDBC</span>
+                  <span class="px-3 py-1 bg-pink-500 text-white text-xs rounded-full shadow-md">MySQL</span>
               </div>
-                    
-              <script>
-                document.getElementById('contactForm').addEventListener('submit', function(event) {
-                    event.preventDefault();
-                    
-                    let name = document.getElementById('name').value;
-                    let email = document.getElementById('email').value;
-                    let message = document.getElementById('message').value;
-                    
-                    console.log(name, email, message);
-                    
-                    if (name && email && message) {
-                        document.getElementById('responseMessage').style.display = 'block';
-                        document.getElementById('contactForm').reset();
-                        
-                        // Hide the success message after 3 seconds
-                        setTimeout(function() {
-                            document.getElementById('responseMessage').style.display = 'none';
-                        }, 3000);
-                    } else {
-                        alert('Please fill in all fields');
-                    }
-                });
-            </script>
-                  </section>
-                
-          
-        </main>
+          </div>
 
-        <!--===== FOOTER=====-->
-        <footer class="footer">
-            <p class="footer__title"></p>
-            <div class="footer__social"><p>You can also visit me on:</p><br>
-                <a href="https://www.facebook.com/share/1ESi59HX1Y/" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
-                <a href="#" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
+          <!-- Project 2 -->
+          <div class="relative bg-white/10 backdrop-blur-md rounded-xl shadow-lg overflow-hidden p-6 transition-all duration-500 hover:scale-105 hover:shadow-2xl border border-white/20">
+            <div class="absolute inset-0 bg-gradient-to-br from-blue-500/30 to-cyan-600/30 opacity-50"></div>
+              <h3 class="text-2xl font-bold text-white mb-4 relative">Chatting Application</h3>
+              <p class="text-white/80 mb-6 relative">
+                  Real-time chat application using Java Swing and AWT for UI, with socket programming for seamless client-server communication.
+              </p>
+              <div class="flex space-x-2 relative">
+                  <span class="px-3 py-1 bg-blue-500 text-white text-xs rounded-full shadow-md">Java</span>
+                  <span class="px-3 py-1 bg-teal-500 text-white text-xs rounded-full shadow-md">Swing</span>
+                  <span class="px-3 py-1 bg-cyan-500 text-white text-xs rounded-full shadow-md">Socket</span>
+              </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="relative bg-white/10 backdrop-blur-md rounded-xl shadow-lg overflow-hidden p-6 transition-all duration-500 hover:scale-105 hover:shadow-2xl border border-white/20">
+              <div class="absolute inset-0 bg-gradient-to-br from-amber-500/30 to-orange-600/30 opacity-50"></div>
+              <h3 class="text-2xl font-bold text-white mb-4 relative">Coffee Website</h3>
+              <p class="text-white/80 mb-6 relative">
+                  A sleek and fully responsive Coffee House website built with HTML, Tailwind CSS, and JavaScript, featuring smooth navigation and an elegant design.
+              </p>
+              <div class="flex space-x-2 relative">
+                  <span class="px-3 py-1 bg-yellow-500 text-white text-xs rounded-full shadow-md">HTML</span>
+                  <span class="px-3 py-1 bg-orange-500 text-white text-xs rounded-full shadow-md">CSS</span>
+                  <span class="px-3 py-1 bg-red-500 text-white text-xs rounded-full shadow-md">JavaScript</span>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="py-20 bg-gray-50">
+            <div class="container mx-auto max-w-7xl px-6">
+                <h2 class="text-3xl font-bold text-center mb-16 relative">
+                    Contact Me
+                    <div class="w-24 h-1 bg-primary mx-auto mt-4"></div>
+                </h2>
                 
-              <br>
-              <br>
-            <p>&#169; Developed By Rishika Gautam</p>
-        </footer>
-    </body>
-</html> 
+                <div class="flex flex-col md:flex-row gap-12">
+                    <div class="md:w-1/2">
+                        <div class="bg-white rounded-xl shadow-lg p-8">
+                            <h3 class="text-2xl font-semibold mb-6">Get in Touch</h3>
+                            <p class="text-gray-700 mb-8">Feel free to reach out to me for collaborations, job opportunities, or just to say hello!</p>
+                            
+                            <div class="space-y-6">
+                                <div class="flex items-start space-x-4">
+                                    <div class="bg-primary text-white p-3 rounded-full">
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium">Email</h4>
+                                        <a href="mailto:rishikagautam967@gmail.com" class="text-gray-600 hover:text-primary">rishikagautam967@gmail.com</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start space-x-4">
+                                    <div class="bg-primary text-white p-3 rounded-full">
+                                        <i class="bx bxl-linkedin"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium">LinkedIn</h4>
+                                        <a href="https://www.linkedin.com/in/rishika-gautam-353758256" class="text-gray-600 hover:text-primary">Rishika Gautam</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start space-x-4">
+                                    <div class="bg-primary text-white p-3 rounded-full">
+                                        <i class="bx bxl-github"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium">GitHub</h4>
+                                        <a href="https://github.com/RishikaGautam004" class="text-gray-600 hover:text-primary">RishikaGautam004</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-1/2">
+                        <div class="bg-white rounded-xl shadow-lg p-8">
+                            <form id="contactForm" class="space-y-6">
+                                <div>
+                                    <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                                    <input type="text" id="name" placeholder="Your name" class="w-full px-4 py-3 border rounded-lg focus:ring focus:ring-primary/20 focus:border-primary transition duration-300" required>
+                                </div>
+                                
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                                    <input type="email" id="email" placeholder="Your email" class="w-full px-4 py-3 border rounded-lg focus:ring focus:ring-primary/20 focus:border-primary transition duration-300" required>
+                                </div>
+                                
+                                <div>
+                                    <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                                    <textarea id="message" placeholder="Your message" rows="5" class="w-full px-4 py-3 border rounded-lg focus:ring focus:ring-primary/20 focus:border-primary transition duration-300" required></textarea>
+                                </div>
+                                
+                                <button type="submit" class="w-full py-3 bg-primary text-white rounded-lg hover:bg-indigo-700 transition duration-300">Send Message</button>
+                            </form>
+                            <p id="responseMessage" class="mt-4 text-green-600 text-center hidden">Message sent successfully!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-xl font-bold">Rishika Gautam</h3>
+                    <p class="text-gray-400 mt-2">Java Developer</p>
+                </div>
+                
+                <div class="mb-6 md:mb-0">
+                    <p class="text-gray-400">You can also visit me on:</p>
+                    <div class="flex space-x-4 mt-3">
+                        <a href="https://www.facebook.com/share/1ESi59HX1Y/" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="bx bxl-facebook text-2xl"></i>
+                        </a>
+                        <a href="https://www.instagram.com/rishika_gautam20?igsh=amw4NTdkdXdqM2lq" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="bx bxl-instagram text-2xl"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/rishika-gautam-353758256" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="bx bxl-linkedin text-2xl"></i>
+                        </a>
+                        <a href="https://github.com/RishikaGautam004" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="bx bxl-github text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p>&#169; 2025 - Developed By Rishika Gautam</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+        
+        // Contact form submission
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            let name = document.getElementById('name').value;
+            let email = document.getElementById('email').value;
+            let message = document.getElementById('message').value;
+            
+            console.log(name, email, message);
+            
+            if (name && email && message) {
+                document.getElementById('responseMessage').classList.remove('hidden');
+                document.getElementById('contactForm').reset();
+                
+                // Hide the success message after 3 seconds
+                setTimeout(function() {
+                    document.getElementById('responseMessage').classList.add('hidden');
+                }, 3000);
+            } else {
+                alert('Please fill in all fields');
+            }
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                document.querySelector(targetId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu when a link is clicked
+                if (!document.getElementById('mobile-menu').classList.contains('hidden')) {
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
